@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Drag Ad Drop</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+
+  </head>
+
+  <body>
+    <form id="form">
+      <input type="text" placeholder="enter Project Name" id="textVal" />
+      <button class="add-project-btn" type="submit">ADD</button>
+    </form>
+    <section class="container" id="container">
+      <div class="row justify-content-between g-3 ">
+      <div class="inProgress col-lg-2 col-md-4 col-sm-6">
+        <h2 class="h2-style gold h4 text-light text-center">In Progress</h2>
+        <ul class="tasksSection" data-type="progress" ondragover="dragoverHandler(event)" ondrop="dropHandler(event)"  >
+          
+        </ul>
+      </div>
+      <div class="onHold  col-lg-2 col-md-4 col-sm-6">
+        <h2 class="h2-style red h4 text-light text-center">On Hold</h2>
+        <ul class="tasksSection" data-type="hold" ondragover="dragoverHandler(event)" ondrop="dropHandler(event)"></ul>
+      </div>
+      <div class="review  col-lg-2 col-md-4 col-sm-6">
+        <h2 class="h2-style blue h4 text-light text-center">In Review</h2>
+        <ul class="tasksSection" data-type="review" ondragover="dragoverHandler(event)" ondrop="dropHandler(event)"></ul>
+      </div>
+      <div class="approved  col-lg-2 col-md-4 col-sm-6">
+        <h2 class="h2-style green h4 text-light text-center">Approved</h2>
+        <ul class="tasksSection" data-type="approved" ondragover="dragoverHandler(event)" ondrop="dropHandler(event)"></ul>
+      </div>
+
+  <div class="remove  col-lg-2 col-md-4 col-sm-6">
+        <h2 class="h2-style green h4 text-light text-center">remove</h2>
+        <ul class="tasksSection" data-type="remove" ondragover="dragoverHandler(event)" ondrop="dropHandler(event)"></ul>
+      </div>
+      </div>
+
+
+    </section>
+<script src="./js/bootstrap.bundle.min.js"></script>
+    <script src="/js/script.js"></script>
+  </body>
+</html>
