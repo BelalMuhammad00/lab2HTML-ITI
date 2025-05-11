@@ -4,14 +4,7 @@ var progress  = document.querySelector('[data-type="progress"]');
 
 
 window.addEventListener('load', () => {
-//   const savedTasks = JSON.parse(localStorage.getItem("tasks")) || [];
-//   savedTasks.forEach(task => {
-//     const column = document.querySelector(`[data-type="${task.column}"]`);
-  
-//     if (column&&!(column.getAttribute("data-type") ==="remove")) {
-//       column.innerHTML += `<li draggable="true" ondragstart="dragstartHandler(event)" id="${task.id}">${task.text}</li>`;
-//     }
-//   });
+
 
 const savedTasks = JSON.parse(localStorage.getItem("tasks")) || [];
 
